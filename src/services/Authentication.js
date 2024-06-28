@@ -1,9 +1,9 @@
 import firebase from "../firebase";
 import { app } from "../firebase";
+import { db } from "../firebase";
 import "firebase/compat/auth";
 
 export const auth = app.auth();
-export const db = app.firestore();
 
 export const registerWithEmailAndPassword = async (
   firstName,

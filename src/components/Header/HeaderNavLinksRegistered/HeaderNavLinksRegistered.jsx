@@ -22,6 +22,11 @@ const HeaderNavLinksRegistered = (props) => {
               Home
             </Link>
           </li>
+          <li>
+            <Link className="dropdown-item" to="/gallery">
+              My Gallery
+            </Link>
+          </li>
           <li
             className="dropdown-item"
             onClick={() => {
