@@ -24,6 +24,13 @@ const PhotoForm = () => {
     if (document.querySelector("#photo-form").checkValidity()) {
       e.preventDefault();
       addPhoto(formData);
+      const modal = document.querySelector("#photoForm");
+      const modalBackdrop = document.querySelector(".modal-backdrop");
+      if (modal && modalBackdrop) {
+        modal.classList.remove("show");
+        modalBackdrop.remove();
+      }
+      document.body.classList.remove("modal-open");
       navigate("/gallery");
     }
   };
@@ -48,20 +55,20 @@ const PhotoForm = () => {
       >
         <div className="modal-dialog">
           <div className="modal-content">
-            <form id="photo-form" onSubmit={submitHandler}>
-              <div className="modal-header">
-                <h3 className="modal-title fs-5" id="photoFormLabel">
-                  Add a Holiday Photo
-                </h3>
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div className="modal-body">
-                <div className="my-3">
+            <div className="modal-header">
+              <h3 className="modal-title fs-5" id="photoFormLabel">
+                Add a Holiday Photo
+              </h3>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <form id="photo-form" onSubmit={submitHandler}>
+                <div className="mb-3">
                   <input
                     type="text"
                     className="form-control"
@@ -86,20 +93,13 @@ const PhotoForm = () => {
                     required
                   />
                 </div>
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Cancel
-                </button>
-                <button type="submit" className="btn btn-primary">
-                  Submit
-                </button>
-              </div>
-            </form>
+                <div className="mb-3">
+                  <button type="submit" className="btn btn-primary w-100">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

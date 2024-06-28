@@ -3,7 +3,7 @@ import HeaderNav from "../Header/HeaderNav/HeaderNav";
 import Homescreen from "../Homescreen/Homescreen/Homescreen";
 import Registration from "../Registration/Registration";
 import Login from "../Login/Login";
-import Gallery from "../Gallery/Gallery";
+import Gallery from "../Gallery/GallerySection/Gallery";
 
 function App() {
   return (
