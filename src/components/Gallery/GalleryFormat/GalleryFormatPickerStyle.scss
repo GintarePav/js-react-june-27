@@ -21,7 +21,7 @@
   padding: 0;
 }
 
-.gallery-format {
+.gallery-format-picker {
   button {
     border: none;
     background-color: transparent;
@@ -72,8 +72,8 @@
       margin: 2px;
     }
 
-    div:first-child,
-    div:last-child {
+    div:nth-child(4n-3),
+    div:nth-child(4n) {
       border-radius: 100%;
     }
   }
@@ -121,7 +121,6 @@
     div {
       display: flex;
       background-color: white;
-      border: 1px solid white;
       justify-content: center;
       align-items: center;
       padding: 2px;

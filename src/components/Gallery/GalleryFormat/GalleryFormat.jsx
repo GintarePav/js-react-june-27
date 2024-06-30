@@ -1,4 +1,4 @@
-import "./GalleryFormatStyle.scss";
+import "./GalleryFormatPickerStyle.scss";
 
 const GalleryFormat = () => {
   return (
@@ -31,39 +31,20 @@ const GalleryFormat = () => {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="gallery-format modal-body d-flex justify-content-center flex-wrap">
+            <div className="gallery-format-picker modal-body d-flex justify-content-center flex-wrap">
               <button type="button">
-                <div className="gallery-format__circle-container">
+                <div className="gallery-format-picker__circle-container">
                   <div></div>
                 </div>
               </button>
               <button type="button">
-                <div className="gallery-format__double-bottom-container">
-                  <div></div>
-                  <div></div>
-                </div>
-              </button>
-              <button type="button">
-                <div className="gallery-format__grid-of-four-container">
-                  <div></div>
-                  <div></div>
+                <div className="gallery-format-picker__double-bottom-container">
                   <div></div>
                   <div></div>
                 </div>
               </button>
               <button type="button">
-                <div className="gallery-format__square-container">
-                  <div></div>
-                </div>
-              </button>
-              <button type="button">
-                <div className="gallery-format__double-container">
-                  <div></div>
-                  <div></div>
-                </div>
-              </button>
-              <button type="button">
-                <div className="gallery-format__squares-and-circles-container">
+                <div className="gallery-format-picker__grid-of-four-container">
                   <div></div>
                   <div></div>
                   <div></div>
@@ -71,23 +52,42 @@ const GalleryFormat = () => {
                 </div>
               </button>
               <button type="button">
-                <div className="gallery-format__horizontal-three-container">
+                <div className="gallery-format-picker__square-container">
+                  <div></div>
+                </div>
+              </button>
+              <button type="button">
+                <div className="gallery-format-picker__double-container">
+                  <div></div>
+                  <div></div>
+                </div>
+              </button>
+              <button type="button">
+                <div className="gallery-format-picker__squares-and-circles-container">
+                  <div></div>
                   <div></div>
                   <div></div>
                   <div></div>
                 </div>
               </button>
               <button type="button">
-                <div className="gallery-format__vertical-three-container">
-                  <div className="gallery-format__vertical-three-container__large"></div>
-                  <div className="gallery-format__vertical-three-container__inner">
+                <div className="gallery-format-picker__horizontal-three-container">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </button>
+              <button type="button">
+                <div className="gallery-format-picker__vertical-three-container">
+                  <div className="gallery-format-picker__vertical-three-container__large"></div>
+                  <div className="gallery-format-picker__vertical-three-container__inner">
                     <div></div>
                     <div></div>
                   </div>
                 </div>
               </button>
               <button type="button">
-                <div className="gallery-format__four-different-container">
+                <div className="gallery-format-picker__four-different-container">
                   <div></div>
                   <div></div>
                   <div></div>
