@@ -24,12 +24,8 @@ const PhotoForm = () => {
     if (document.querySelector("#photo-form").checkValidity()) {
       e.preventDefault();
       addPhoto(formData);
-      const modal = document.querySelector("#photoForm");
-      const modalBackdrop = document.querySelector(".modal-backdrop");
-      if (modal && modalBackdrop) {
-        modal.classList.remove("show");
-        modalBackdrop.remove();
-      }
+      document.querySelector("#photoForm").classList.remove("show");
+      document.querySelector(".modal-backdrop").remove();
       document.body.classList.remove("modal-open");
       navigate("/gallery");
     }

@@ -18,7 +18,7 @@ const HeaderNav = () => {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary mb-3">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             Holiday Gallery

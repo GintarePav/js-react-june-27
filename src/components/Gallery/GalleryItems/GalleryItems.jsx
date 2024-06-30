@@ -25,9 +25,9 @@ const GalleryItems = (props) => {
             <div className="modal-dialog modal-fullscreen">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h5 className="modal-title" id={`labelForPhoto${i}`}>
+                  <h3 className="modal-title" id={`labelForPhoto${i}`}>
                     {photo.photoTitle}
-                  </h5>
+                  </h3>
                   <button
                     type="button"
                     className="btn-close"

@@ -4,6 +4,7 @@ import { auth } from "../../../services/Authentication";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import GalleryItems from "../GalleryItems/GalleryItems";
+import GalleryFormat from "../GalleryFormat/GalleryFormat";
 
 const Gallery = () => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const Gallery = () => {
 
   return (
     <section className="container">
+      <GalleryFormat />
       <div>
         <GalleryItems data={gallery} />
       </div>
