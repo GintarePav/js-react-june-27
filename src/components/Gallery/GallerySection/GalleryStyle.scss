@@ -1,0 +1,183 @@
+@import "./GalleryStyleMixins.scss";
+
+.gallery-circle {
+  @include flexCenter;
+
+  .gallery-div {
+    @include squareDimensions(50vw);
+    @include divBehaviour;
+    border-radius: 50%;
+
+    .gallery-img {
+      @include imgBehaviour;
+      border-radius: 50%;
+    }
+  }
+}
+
+.gallery-pairs-vertical {
+  @include flexCenter;
+  .gallery-div {
+    @include size(30vw, 80vh);
+    @include divBehaviour;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+}
+
+.gallery-four {
+  @include flexCenter;
+  .gallery-div {
+    @include squareDimensions(30vw);
+    @include divBehaviour;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+}
+
+.gallery-square {
+  @include flexCenter;
+
+  .gallery-div {
+    @include squareDimensions(50vw);
+    @include divBehaviour;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+}
+
+.gallery-pairs-horizontal {
+  @include flexCenter;
+  .gallery-div {
+    @include size(80vw, 40vh);
+    @include divBehaviour;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+}
+
+.gallery-four-mixed-shapes {
+  @include flexCenter;
+  .gallery-div {
+    @include squareDimensions(30vw);
+    @include divBehaviour;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+
+  .gallery-div:nth-child(4n-3),
+  .gallery-div:nth-child(4n) {
+    border-radius: 50%;
+    .gallery-img {
+      border-radius: 50%;
+    }
+  }
+}
+
+.gallery-three-horizontal {
+  @include flexCenter;
+
+  .gallery-div:nth-child(3n-2),
+  .gallery-div:nth-child(3n-1) {
+    @include size(30vw, 30vh);
+    @include divBehaviour;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+
+  .gallery-div:nth-child(3n) {
+    @include size(calc(60vw + 20px), 50vh);
+    @include divBehaviour;
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+}
+
+.gallery-three-vertical {
+  @include grid;
+
+  .gallery-div:nth-child(3n-2) {
+    @include size(50vw, calc(60vh + 20px));
+    @include divBehaviour;
+    grid-column: span 1;
+    grid-row: span 2;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+
+  .gallery-div:nth-child(3n-1),
+  .gallery-div:nth-child(3n) {
+    @include size(30vw, 30vh);
+    @include divBehaviour;
+    grid-column: span 1;
+    grid-row: span 1;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+}
+
+.gallery-four-mixed-sizes {
+  @include grid;
+  grid-auto-rows: 1fr;
+
+  .gallery-div {
+    @include divBehaviour;
+  }
+
+  .gallery-div:nth-child(4n-3) {
+    @include size(50vw, calc(50vh + 20px));
+    grid-column: 1 / span 1;
+    grid-row: span 2;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+
+  .gallery-div:nth-child(4n-2) {
+    @include size(35vw, 25vh);
+    grid-column: 2 / span 1;
+    grid-row: span 1;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+
+  .gallery-div:nth-child(4n-1) {
+    @include size(50vw, 25vh);
+    grid-column: 1 / span 1;
+    grid-row: span 1;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+
+  .gallery-div:nth-child(4n) {
+    @include size(35vw, calc(50vh + 20px));
+    grid-column: 2 / span 1;
+    grid-row: span 2;
+
+    .gallery-img {
+      @include imgBehaviour;
+    }
+  }
+}

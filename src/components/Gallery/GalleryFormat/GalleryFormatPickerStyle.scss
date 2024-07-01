@@ -1,7 +1,7 @@
 @mixin format-container($justify, $align) {
   height: 50px;
   width: 50px;
-  background-color: gray;
+  background-color: #808080;
   display: flex;
   justify-content: $justify;
   align-items: $align;
@@ -10,15 +10,9 @@
 }
 
 @mixin format-divs-base($height, $width) {
-  background-color: white;
+  background-color: #ffffff;
   height: $height;
   width: $width;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 .gallery-format-picker {
@@ -37,7 +31,7 @@
   &__double-bottom-container {
     @include format-container(center, start);
     div {
-      @include format-divs-base(35px, 18px);
+      @include format-divs-base(44px, 19px);
       margin: 3px 2px;
     }
   }
@@ -60,7 +54,7 @@
   &__double-container {
     @include format-container(center, center);
     div {
-      @include format-divs-base(20px, 44px);
+      @include format-divs-base(19px, 44px);
       margin: 2px;
     }
   }

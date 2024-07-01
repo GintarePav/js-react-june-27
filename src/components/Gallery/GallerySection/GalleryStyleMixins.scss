@@ -1,0 +1,37 @@
+@mixin flexCenter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  justify-items: center;
+}
+
+@mixin divBehaviour {
+  position: relative;
+  margin: 10px;
+}
+
+@mixin imgBehaviour {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin squareDimensions($size) {
+  width: $size;
+  padding-top: $size;
+}

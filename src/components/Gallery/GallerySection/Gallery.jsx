@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import GalleryItems from "../GalleryItems/GalleryItems";
 import GalleryFormat from "../GalleryFormat/GalleryFormat";
+import "./GalleryStyle.scss";
 
 const Gallery = () => {
   const navigate = useNavigate();
@@ -26,12 +27,10 @@ const Gallery = () => {
     }
   }, [modalOpen]);
 
-  console.log(gallery);
-
   return (
     <section className="container">
       <GalleryFormat />
-      <div>
+      <div id="gallery-container" className="gallery-four-mixed-sizes">
         <GalleryItems data={gallery} />
       </div>
     </section>

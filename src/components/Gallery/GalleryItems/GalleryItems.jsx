@@ -8,12 +8,13 @@ const GalleryItems = (props) => {
   return (
     <>
       {props.data.map((photo, i) => (
-        <div key={i}>
+        <div key={i} className="gallery-div">
           <img
             alt={photo.photoTitle}
             src={photo.photoUrl}
             data-bs-toggle="modal"
             data-bs-target={`#photo${i}`}
+            className="gallery-img"
           />
           <div
             className="modal fade w-100 h-100"
@@ -25,9 +26,9 @@ const GalleryItems = (props) => {
             <div className="modal-dialog modal-fullscreen">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h3 className="modal-title" id={`labelForPhoto${i}`}>
+                  <h4 className="modal-title" id={`labelForPhoto${i}`}>
                     {photo.photoTitle}
-                  </h3>
+                  </h4>
                   <button
                     type="button"
                     className="btn-close"
@@ -36,12 +37,20 @@ const GalleryItems = (props) => {
                   ></button>
                 </div>
                 <div className="modal-body">
-                  <img src={photo.photoUrl} alt={photo.photoTitle} />
+                  <div className="h-100 w-100">
+                    <img
+                      src={photo.photoUrl}
+                      alt={photo.photoTitle}
+                      className="w-100 h-100 object-fit-cover"
+                    />
+                  </div>
                 </div>
                 <div className="modal-footer">
                   <a
+                    href=""
                     data-bs-dismiss="modal"
                     onClick={() => handleDelete(photo.id)}
+                    className="link-secondary"
                   >
                     <i className="bi bi-trash3"></i>
                   </a>

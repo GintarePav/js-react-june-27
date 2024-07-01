@@ -1,20 +1,27 @@
 import "./GalleryFormatPickerStyle.scss";
 
 const GalleryFormat = () => {
+  const changeGalleryClass = (e, className) => {
+    e.preventDefault();
+    const gallery = document.getElementById("gallery-container");
+    gallery.classList = "";
+    gallery.classList.add(className);
+  };
+
   return (
     <>
-      <button
+      <a
         type="button"
-        className="btn btn-primary mb-3"
+        className="btn btn-primary mb-3 text-center"
         data-bs-toggle="modal"
         data-bs-target="#formatModal"
       >
         Change Format
-      </button>
+      </a>
       <div
         className="modal fade"
         id="formatModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="formatModalLabel"
         aria-hidden="true"
       >
@@ -32,18 +39,27 @@ const GalleryFormat = () => {
               ></button>
             </div>
             <div className="gallery-format-picker modal-body d-flex justify-content-center flex-wrap">
-              <button type="button">
+              <button
+                type="button"
+                onClick={(e) => changeGalleryClass(e, "gallery-circle")}
+              >
                 <div className="gallery-format-picker__circle-container">
                   <div></div>
                 </div>
               </button>
-              <button type="button">
+              <button
+                type="button"
+                onClick={(e) => changeGalleryClass(e, "gallery-pairs-vertical")}
+              >
                 <div className="gallery-format-picker__double-bottom-container">
                   <div></div>
                   <div></div>
                 </div>
               </button>
-              <button type="button">
+              <button
+                type="button"
+                onClick={(e) => changeGalleryClass(e, "gallery-four")}
+              >
                 <div className="gallery-format-picker__grid-of-four-container">
                   <div></div>
                   <div></div>
@@ -51,18 +67,31 @@ const GalleryFormat = () => {
                   <div></div>
                 </div>
               </button>
-              <button type="button">
+              <button
+                type="button"
+                onClick={(e) => changeGalleryClass(e, "gallery-square")}
+              >
                 <div className="gallery-format-picker__square-container">
                   <div></div>
                 </div>
               </button>
-              <button type="button">
+              <button
+                type="button"
+                onClick={(e) =>
+                  changeGalleryClass(e, "gallery-pairs-horizontal")
+                }
+              >
                 <div className="gallery-format-picker__double-container">
                   <div></div>
                   <div></div>
                 </div>
               </button>
-              <button type="button">
+              <button
+                type="button"
+                onClick={(e) =>
+                  changeGalleryClass(e, "gallery-four-mixed-shapes")
+                }
+              >
                 <div className="gallery-format-picker__squares-and-circles-container">
                   <div></div>
                   <div></div>
@@ -70,14 +99,22 @@ const GalleryFormat = () => {
                   <div></div>
                 </div>
               </button>
-              <button type="button">
+              <button
+                type="button"
+                onClick={(e) =>
+                  changeGalleryClass(e, "gallery-three-horizontal")
+                }
+              >
                 <div className="gallery-format-picker__horizontal-three-container">
                   <div></div>
                   <div></div>
                   <div></div>
                 </div>
               </button>
-              <button type="button">
+              <button
+                type="button"
+                onClick={(e) => changeGalleryClass(e, "gallery-three-vertical")}
+              >
                 <div className="gallery-format-picker__vertical-three-container">
                   <div className="gallery-format-picker__vertical-three-container__large"></div>
                   <div className="gallery-format-picker__vertical-three-container__inner">
@@ -86,7 +123,12 @@ const GalleryFormat = () => {
                   </div>
                 </div>
               </button>
-              <button type="button">
+              <button
+                type="button"
+                onClick={(e) =>
+                  changeGalleryClass(e, "gallery-four-mixed-sizes")
+                }
+              >
                 <div className="gallery-format-picker__four-different-container">
                   <div></div>
                   <div></div>
