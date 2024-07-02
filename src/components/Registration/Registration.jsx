@@ -61,13 +61,33 @@ const Registration = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="input-group mb-3">
+            <span className="input-group-text dropdows">
+              <a
+                href=""
+                className="link-secondary"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i className="bi bi-info-circle"></i>
+              </a>
+              <ul className="dropdown-menu">
+                <li className="dropdown-item">Must include:</li>
+                <li className="dropdown-item">at least 8 characters</li>
+                <li className="dropdown-item">lower-case letters</li>
+                <li className="dropdown-item">upper-case letters</li>
+                <li className="dropdown-item">numbers</li>
+                <li className="dropdown-item">special characters</li>
+              </ul>
+            </span>
             <input
               type="password"
               className="form-control"
               aria-label="Password"
               placeholder="Password"
               minLength="8"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
               name="password"
               value={userData.password}
               onChange={handleChange}
