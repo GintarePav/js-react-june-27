@@ -74,11 +74,11 @@ const Registration = () => {
               </a>
               <ul className="dropdown-menu">
                 <li className="dropdown-item">Must include:</li>
-                <li className="dropdown-item">at least 8 characters</li>
-                <li className="dropdown-item">lower-case letters</li>
-                <li className="dropdown-item">upper-case letters</li>
-                <li className="dropdown-item">numbers</li>
-                <li className="dropdown-item">special characters</li>
+                <li className="dropdown-item">At least 8 characters</li>
+                <li className="dropdown-item">Lower-case letters</li>
+                <li className="dropdown-item">Upper-case letters</li>
+                <li className="dropdown-item">Numbers</li>
+                <li className="dropdown-item">Special characters</li>
               </ul>
             </span>
             <input
