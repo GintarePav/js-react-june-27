@@ -62,6 +62,18 @@ const Registration = () => {
             />
           </div>
           <div className="input-group mb-3">
+            <input
+              type="password"
+              className="form-control"
+              aria-label="Password"
+              placeholder="Password"
+              minLength="8"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
+              name="password"
+              value={userData.password}
+              onChange={handleChange}
+              required
+            />
             <span className="input-group-text dropdows">
               <a
                 href=""
@@ -81,18 +93,6 @@ const Registration = () => {
                 <li className="dropdown-item">Special characters</li>
               </ul>
             </span>
-            <input
-              type="password"
-              className="form-control"
-              aria-label="Password"
-              placeholder="Password"
-              minLength="8"
-              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
-              name="password"
-              value={userData.password}
-              onChange={handleChange}
-              required
-            />
           </div>
           <div className="mb-3">
             <button type="submit" className="btn btn-primary w-100">
