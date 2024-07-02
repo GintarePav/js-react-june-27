@@ -34,7 +34,7 @@ const Registration = () => {
       <div className="d-flex flex-column justify-content-center align-items-center">
         <form id="registration-form" onSubmit={submitHandler}>
           <div className="my-5">
-            <h3 className="text-center">Join Holiday Gallery!</h3>
+            <h3 className="text-center">Join the Holiday Gallery!</h3>
           </div>
           <div className="mb-3">
             <input

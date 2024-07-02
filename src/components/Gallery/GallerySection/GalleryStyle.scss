@@ -135,7 +135,6 @@
 
 .gallery-four-mixed-sizes {
   @include grid;
-  grid-auto-rows: 1fr;
 
   .gallery-div {
     @include divBehaviour;

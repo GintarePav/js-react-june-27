@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../services/Authentication";
 import { addPhoto } from "../../../services/PhotoManagement";
+import "./PhotoFormStyle.scss";
 
 const PhotoForm = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -37,9 +38,9 @@ const PhotoForm = () => {
         href=""
         data-bs-toggle="modal"
         data-bs-target="#photoForm"
-        className="btn-primary"
+        className="btn-primary p-3 add-photo-button"
       >
-        <i className="bi bi-plus-circle"></i>
+        <i className="bi bi-plus-circle-fill"></i>
       </a>
 
       <div

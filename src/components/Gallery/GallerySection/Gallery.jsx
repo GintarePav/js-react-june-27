@@ -4,7 +4,6 @@ import { auth } from "../../../services/Authentication";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import GalleryItems from "../GalleryItems/GalleryItems";
-import GalleryFormat from "../GalleryFormat/GalleryFormat";
 import "./GalleryStyle.scss";
 
 const Gallery = () => {
@@ -29,7 +28,6 @@ const Gallery = () => {
 
   return (
     <section className="container">
-      <GalleryFormat />
       <div id="gallery-container" className="gallery-four-mixed-sizes">
         <GalleryItems data={gallery} />
       </div>

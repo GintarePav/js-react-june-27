@@ -10,14 +10,16 @@ const GalleryFormat = () => {
 
   return (
     <>
-      <a
-        type="button"
-        className="btn btn-primary mb-3 text-center"
-        data-bs-toggle="modal"
-        data-bs-target="#formatModal"
-      >
-        Change Format
-      </a>
+      <li className="nav-item">
+        <a
+          type="button"
+          className="nav-link"
+          data-bs-toggle="modal"
+          data-bs-target="#formatModal"
+        >
+          Change Gallery Format
+        </a>
+      </li>
       <div
         className="modal fade"
         id="formatModal"

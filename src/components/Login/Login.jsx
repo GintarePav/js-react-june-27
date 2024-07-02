@@ -29,7 +29,7 @@ const Login = () => {
       <div className="d-flex flex-column justify-content-center align-items-center">
         <form id="login-form" onSubmit={submitHandler}>
           <div className="my-5">
-            <h3 className="text-center">Welcome Back!</h3>
+            <h3 className="text-center">Welcome Back Traveller!</h3>
           </div>
           <div className="mb-3">
             <input

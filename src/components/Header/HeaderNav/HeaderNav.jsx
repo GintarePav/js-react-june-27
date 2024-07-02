@@ -1,12 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { auth, getUserData } from "../../../services/Authentication";
 import { useAuthState } from "react-firebase-hooks/auth";
 import HeaderNavLinksUnregistered from "../HeaderNavLinksUnregistered/HeaderNavLinksUnregistered";
 import HeaderNavLinksRegistered from "../HeaderNavLinksRegistered/HeaderNavLinksRegistered";
+import GalleryFormat from "../GalleryFormat/GalleryFormat";
 
 const HeaderNav = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [user, loading, error] = useAuthState(auth);
   const [userData, setUserData] = useState({});
 
@@ -17,7 +19,7 @@ const HeaderNav = () => {
   }, [user, loading]);
 
   return (
-    <header>
+    <header className="vh-25">
       <nav className="navbar navbar-expand-lg bg-body-tertiary mb-3">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
@@ -37,10 +39,13 @@ const HeaderNav = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {user ? (
-                <HeaderNavLinksRegistered
-                  firstName={userData.firstName}
-                  email={userData.email}
-                />
+                <>
+                  <HeaderNavLinksRegistered
+                    firstName={userData.firstName}
+                    email={userData.email}
+                  />
+                  {location.pathname === "/gallery" && <GalleryFormat />}
+                </>
               ) : (
                 <HeaderNavLinksUnregistered />
               )}
