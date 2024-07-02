@@ -51,6 +51,7 @@ const Registration = () => {
           <div className="mb-3">
             <input
               type="email"
+              pattern=".+@[a-z0-9\.\-]+\.[a-z]{2,}"
               className="form-control"
               aria-label="Email"
               placeholder="Email"
