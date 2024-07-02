@@ -5,13 +5,12 @@ import Registration from "../Registration/Registration";
 import Login from "../Login/Login";
 import Gallery from "../Gallery/GallerySection/Gallery";
 import Footer from "../Footer/Footer";
-import "./Main.scss";
 
 function App() {
   return (
     <Router>
       <HeaderNav />
-      <main className="main">
+      <main style={{ minHeight: 75 + "vh" }}>
         <Routes>
           <Route path="/" element={<Homescreen />} />
           <Route path="/register" element={<Registration />} />
